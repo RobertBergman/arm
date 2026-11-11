@@ -1,0 +1,8370 @@
+{
+  "format": "solidcraft/48",
+  "name": "Realistic Arm Grasper Workcell",
+  "units": "mm",
+  "params": [],
+  "features": [
+    {
+      "id": 1,
+      "name": "GridBaseBox",
+      "suppressed": false,
+      "body_names": [
+        "Grid Plate"
+      ],
+      "param_names": [
+        "d1",
+        "d2",
+        "d3"
+      ],
+      "type": "box",
+      "corner": [
+        -180.0,
+        -120.0,
+        -10.0
+      ],
+      "length": "360",
+      "width": "240",
+      "height": "10",
+      "operation": "new_body"
+    },
+    {
+      "id": 2,
+      "name": "GridCorners",
+      "suppressed": false,
+      "param_names": [
+        "d4"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "min": [
+            -180.0,
+            -120.0,
+            -10.0
+          ],
+          "max": [
+            180.0,
+            120.0,
+            0.0
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "min": [
+            -180.0,
+            -120.0,
+            -10.0
+          ],
+          "max": [
+            180.0,
+            120.0,
+            0.0
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "min": [
+            -180.0,
+            -120.0,
+            -10.0
+          ],
+          "max": [
+            180.0,
+            120.0,
+            0.0
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "min": [
+            -180.0,
+            -120.0,
+            -10.0
+          ],
+          "max": [
+            180.0,
+            120.0,
+            0.0
+          ]
+        }
+      ],
+      "edge_names": [
+        "F1:+x|F1:+y",
+        "F1:+y|F1:-x",
+        "F1:+x|F1:-y",
+        "F1:-x|F1:-y"
+      ],
+      "type": "fillet",
+      "edges": [
+        [
+          180.0,
+          120.0,
+          -5.0
+        ],
+        [
+          -180.0,
+          120.0,
+          -5.0
+        ],
+        [
+          180.0,
+          -120.0,
+          -5.0
+        ],
+        [
+          -180.0,
+          -120.0,
+          -5.0
+        ]
+      ],
+      "radius": "8"
+    },
+    {
+      "id": 3,
+      "name": "GridTopChamfer",
+      "suppressed": false,
+      "param_names": [
+        "d5"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -180.00000000000003,
+            -120.00000000000001,
+            -10.000000000000007
+          ],
+          "max": [
+            180.0,
+            120.00000000000001,
+            2.6014143622662836e-15
+          ]
+        }
+      ],
+      "edge_names": [
+        "F1:+y|F1:+z"
+      ],
+      "type": "chamfer",
+      "edges": [
+        [
+          0.0,
+          120.0,
+          0.0
+        ]
+      ],
+      "distance": "1.5"
+    },
+    {
+      "id": 4,
+      "name": "GridGrooveX1",
+      "suppressed": false,
+      "param_names": [
+        "d6",
+        "d7",
+        "d8"
+      ],
+      "participants": [
+        "Grid Plate"
+      ],
+      "type": "box",
+      "corner": [
+        -150.6,
+        -108.0,
+        -0.7
+      ],
+      "length": "1.2",
+      "width": "216",
+      "height": "1",
+      "operation": "cut"
+    },
+    {
+      "id": 5,
+      "name": "GridGroovesX",
+      "suppressed": false,
+      "param_names": [
+        "d9",
+        "d10"
+      ],
+      "type": "pattern",
+      "features": [
+        4
+      ],
+      "pattern": {
+        "type": "rectangular",
+        "dir1": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "count1": "11",
+        "spacing1": "30"
+      }
+    },
+    {
+      "id": 6,
+      "name": "GridGrooveY1",
+      "suppressed": false,
+      "param_names": [
+        "d11",
+        "d12",
+        "d13"
+      ],
+      "participants": [
+        "Grid Plate"
+      ],
+      "type": "box",
+      "corner": [
+        -168.0,
+        -90.6,
+        -0.7
+      ],
+      "length": "336",
+      "width": "1.2",
+      "height": "1",
+      "operation": "cut"
+    },
+    {
+      "id": 7,
+      "name": "GridGroovesY",
+      "suppressed": false,
+      "param_names": [
+        "d14",
+        "d15"
+      ],
+      "type": "pattern",
+      "features": [
+        6
+      ],
+      "pattern": {
+        "type": "rectangular",
+        "dir1": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "count1": "7",
+        "spacing1": "30"
+      }
+    },
+    {
+      "id": 8,
+      "name": "GridBolt1",
+      "suppressed": false,
+      "body_names": [
+        "Grid Bolt 1"
+      ],
+      "param_names": [
+        "d16",
+        "d17"
+      ],
+      "type": "cylinder",
+      "base": [
+        -166.0,
+        -106.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "4",
+      "height": "3",
+      "operation": "new_body"
+    },
+    {
+      "id": 9,
+      "name": "GridBolt2",
+      "suppressed": false,
+      "body_names": [
+        "Grid Bolt 2"
+      ],
+      "param_names": [
+        "d18",
+        "d19"
+      ],
+      "type": "cylinder",
+      "base": [
+        166.0,
+        -106.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "4",
+      "height": "3",
+      "operation": "new_body"
+    },
+    {
+      "id": 10,
+      "name": "GridBolt3",
+      "suppressed": false,
+      "body_names": [
+        "Grid Bolt 3"
+      ],
+      "param_names": [
+        "d20",
+        "d21"
+      ],
+      "type": "cylinder",
+      "base": [
+        -166.0,
+        106.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "4",
+      "height": "3",
+      "operation": "new_body"
+    },
+    {
+      "id": 11,
+      "name": "GridBolt4",
+      "suppressed": false,
+      "body_names": [
+        "Grid Bolt 4"
+      ],
+      "param_names": [
+        "d22",
+        "d23"
+      ],
+      "type": "cylinder",
+      "base": [
+        166.0,
+        106.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "4",
+      "height": "3",
+      "operation": "new_body"
+    },
+    {
+      "id": 12,
+      "name": "ZoneASketch",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "origin",
+        "name": "XY"
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "p1",
+            "pos": [
+              -158.0,
+              -44.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p2",
+            "pos": [
+              -62.0,
+              -44.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p3",
+            "pos": [
+              -62.0,
+              4.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p4",
+            "pos": [
+              -158.0,
+              4.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p5",
+            "pos": [
+              -155.5,
+              -41.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p6",
+            "pos": [
+              -64.5,
+              -41.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p7",
+            "pos": [
+              -64.5,
+              1.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p8",
+            "pos": [
+              -155.5,
+              1.5
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 1,
+            "construction": false
+          },
+          {
+            "id": "l5",
+            "type": "line",
+            "a": 5,
+            "b": 6,
+            "construction": false
+          },
+          {
+            "id": "l6",
+            "type": "line",
+            "a": 6,
+            "b": 7,
+            "construction": false
+          },
+          {
+            "id": "l7",
+            "type": "line",
+            "a": 7,
+            "b": 8,
+            "construction": false
+          },
+          {
+            "id": "l8",
+            "type": "line",
+            "a": 8,
+            "b": 5,
+            "construction": false
+          }
+        ],
+        "constraints": [
+          {
+            "id": "k1",
+            "type": "horizontal",
+            "l": 0
+          },
+          {
+            "id": "k2",
+            "type": "horizontal",
+            "l": 2
+          },
+          {
+            "id": "k3",
+            "type": "vertical",
+            "l": 1
+          },
+          {
+            "id": "k4",
+            "type": "vertical",
+            "l": 3
+          },
+          {
+            "id": "k5",
+            "type": "horizontal",
+            "l": 4
+          },
+          {
+            "id": "k6",
+            "type": "horizontal",
+            "l": 6
+          },
+          {
+            "id": "k7",
+            "type": "vertical",
+            "l": 5
+          },
+          {
+            "id": "k8",
+            "type": "vertical",
+            "l": 7
+          }
+        ],
+        "counters": {
+          "k": 8,
+          "l": 8,
+          "p": 8
+        }
+      }
+    },
+    {
+      "id": 13,
+      "name": "ZoneAFrameExt",
+      "suppressed": false,
+      "body_names": [
+        "Zone A Frame"
+      ],
+      "param_names": [
+        "d24"
+      ],
+      "type": "extrude",
+      "sketch": 12,
+      "profiles": {
+        "type": "curves",
+        "loops": [
+          [
+            "l1",
+            "l2",
+            "l3",
+            "l4"
+          ]
+        ]
+      },
+      "extent": {
+        "distance": "0.35",
+        "convention": "total_distance",
+        "direction": "positive"
+      },
+      "operation": "new_body"
+    },
+    {
+      "id": 14,
+      "name": "ZoneBSketch",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "origin",
+        "name": "XY"
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "p1",
+            "pos": [
+              62.0,
+              -44.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p2",
+            "pos": [
+              158.0,
+              -44.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p3",
+            "pos": [
+              158.0,
+              4.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p4",
+            "pos": [
+              62.0,
+              4.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p5",
+            "pos": [
+              64.5,
+              -41.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p6",
+            "pos": [
+              155.5,
+              -41.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p7",
+            "pos": [
+              155.5,
+              1.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p8",
+            "pos": [
+              64.5,
+              1.5
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 1,
+            "construction": false
+          },
+          {
+            "id": "l5",
+            "type": "line",
+            "a": 5,
+            "b": 6,
+            "construction": false
+          },
+          {
+            "id": "l6",
+            "type": "line",
+            "a": 6,
+            "b": 7,
+            "construction": false
+          },
+          {
+            "id": "l7",
+            "type": "line",
+            "a": 7,
+            "b": 8,
+            "construction": false
+          },
+          {
+            "id": "l8",
+            "type": "line",
+            "a": 8,
+            "b": 5,
+            "construction": false
+          }
+        ],
+        "constraints": [
+          {
+            "id": "k1",
+            "type": "horizontal",
+            "l": 0
+          },
+          {
+            "id": "k2",
+            "type": "horizontal",
+            "l": 2
+          },
+          {
+            "id": "k3",
+            "type": "vertical",
+            "l": 1
+          },
+          {
+            "id": "k4",
+            "type": "vertical",
+            "l": 3
+          },
+          {
+            "id": "k5",
+            "type": "horizontal",
+            "l": 4
+          },
+          {
+            "id": "k6",
+            "type": "horizontal",
+            "l": 6
+          },
+          {
+            "id": "k7",
+            "type": "vertical",
+            "l": 5
+          },
+          {
+            "id": "k8",
+            "type": "vertical",
+            "l": 7
+          }
+        ],
+        "counters": {
+          "k": 8,
+          "l": 8,
+          "p": 8
+        }
+      }
+    },
+    {
+      "id": 15,
+      "name": "ZoneBFrameExt",
+      "suppressed": false,
+      "body_names": [
+        "Zone B Frame"
+      ],
+      "param_names": [
+        "d25"
+      ],
+      "type": "extrude",
+      "sketch": 14,
+      "profiles": {
+        "type": "curves",
+        "loops": [
+          [
+            "l1",
+            "l2",
+            "l3",
+            "l4"
+          ]
+        ]
+      },
+      "extent": {
+        "distance": "0.35",
+        "convention": "total_distance",
+        "direction": "positive"
+      },
+      "operation": "new_body"
+    },
+    {
+      "id": 18,
+      "name": "BodyTransfer1",
+      "suppressed": false,
+      "component": 16,
+      "type": "body_transfer",
+      "bodies": [
+        "Grid Plate"
+      ],
+      "from": 0,
+      "to": 16,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 19,
+      "name": "BodyTransfer2",
+      "suppressed": false,
+      "component": 16,
+      "type": "body_transfer",
+      "bodies": [
+        "Grid Bolt 1"
+      ],
+      "from": 0,
+      "to": 16,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 20,
+      "name": "BodyTransfer3",
+      "suppressed": false,
+      "component": 16,
+      "type": "body_transfer",
+      "bodies": [
+        "Grid Bolt 2"
+      ],
+      "from": 0,
+      "to": 16,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 21,
+      "name": "BodyTransfer4",
+      "suppressed": false,
+      "component": 16,
+      "type": "body_transfer",
+      "bodies": [
+        "Grid Bolt 3"
+      ],
+      "from": 0,
+      "to": 16,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 22,
+      "name": "BodyTransfer5",
+      "suppressed": false,
+      "component": 16,
+      "type": "body_transfer",
+      "bodies": [
+        "Grid Bolt 4"
+      ],
+      "from": 0,
+      "to": 16,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 23,
+      "name": "BodyTransfer6",
+      "suppressed": false,
+      "component": 16,
+      "type": "body_transfer",
+      "bodies": [
+        "Zone A Frame"
+      ],
+      "from": 0,
+      "to": 16,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 24,
+      "name": "BodyTransfer7",
+      "suppressed": false,
+      "component": 16,
+      "type": "body_transfer",
+      "bodies": [
+        "Zone B Frame"
+      ],
+      "from": 0,
+      "to": 16,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 25,
+      "name": "TruckBodySide",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "custom",
+        "plane": {
+          "origin": [
+            -110.0,
+            -20.0,
+            0.0
+          ],
+          "x_dir": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "y_dir": [
+            -0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "l1.start",
+            "pos": [
+              -42.0,
+              7.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l1.end",
+            "pos": [
+              42.0,
+              7.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l2.end",
+            "pos": [
+              42.0,
+              20.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l3.end",
+            "pos": [
+              29.0,
+              22.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l4.end",
+            "pos": [
+              21.0,
+              35.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l5.end",
+            "pos": [
+              5.0,
+              35.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l6.end",
+            "pos": [
+              5.0,
+              22.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l7.end",
+            "pos": [
+              -42.0,
+              22.0
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 5,
+            "construction": false
+          },
+          {
+            "id": "l5",
+            "type": "line",
+            "a": 5,
+            "b": 6,
+            "construction": false
+          },
+          {
+            "id": "l6",
+            "type": "line",
+            "a": 6,
+            "b": 7,
+            "construction": false
+          },
+          {
+            "id": "l7",
+            "type": "line",
+            "a": 7,
+            "b": 8,
+            "construction": false
+          },
+          {
+            "id": "l8",
+            "type": "line",
+            "a": 8,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [],
+        "counters": {
+          "l": 8
+        }
+      }
+    },
+    {
+      "id": 26,
+      "name": "TruckBodyExt",
+      "suppressed": false,
+      "body_names": [
+        "Truck Body"
+      ],
+      "param_names": [
+        "d26"
+      ],
+      "type": "extrude",
+      "sketch": 25,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "34",
+        "convention": "total_distance",
+        "direction": "symmetric"
+      },
+      "operation": "new_body"
+    },
+    {
+      "id": 27,
+      "name": "TruckBedCut",
+      "suppressed": false,
+      "param_names": [
+        "d27",
+        "d28",
+        "d29"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "box",
+      "corner": [
+        -149.0,
+        -30.5,
+        13.0
+      ],
+      "length": "41",
+      "width": "21",
+      "height": "12",
+      "operation": "cut"
+    },
+    {
+      "id": 28,
+      "name": "TruckBedRib1",
+      "suppressed": false,
+      "param_names": [
+        "d30",
+        "d31",
+        "d32"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "box",
+      "corner": [
+        -147.0,
+        -28.5,
+        13.0
+      ],
+      "length": "37",
+      "width": "2",
+      "height": "0.8",
+      "operation": "join"
+    },
+    {
+      "id": 29,
+      "name": "TruckBedRibs",
+      "suppressed": false,
+      "param_names": [
+        "d33",
+        "d34"
+      ],
+      "type": "pattern",
+      "features": [
+        28
+      ],
+      "pattern": {
+        "type": "rectangular",
+        "dir1": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "count1": "3",
+        "spacing1": "7.5"
+      }
+    },
+    {
+      "id": 30,
+      "name": "TruckSideWin",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "custom",
+        "plane": {
+          "origin": [
+            -110.0,
+            -20.0,
+            0.0
+          ],
+          "x_dir": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "y_dir": [
+            -0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "l1.start",
+            "pos": [
+              8.0,
+              23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l1.end",
+            "pos": [
+              25.5,
+              23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l2.end",
+            "pos": [
+              19.5,
+              32.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l3.end",
+            "pos": [
+              8.0,
+              32.5
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [],
+        "counters": {
+          "l": 4
+        }
+      }
+    },
+    {
+      "id": 31,
+      "name": "TruckSideWinCut",
+      "suppressed": false,
+      "param_names": [
+        "d35"
+      ],
+      "type": "extrude",
+      "sketch": 30,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "38",
+        "convention": "total_distance",
+        "direction": "symmetric"
+      },
+      "operation": "cut",
+      "targets": [
+        "Truck Body"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "TruckWindshieldCut",
+      "suppressed": false,
+      "param_names": [
+        "d36",
+        "d37",
+        "d38"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "box",
+      "corner": [
+        -95.0,
+        -33.5,
+        24.0
+      ],
+      "length": "18",
+      "width": "27",
+      "height": "8.5",
+      "operation": "cut"
+    },
+    {
+      "id": 33,
+      "name": "TruckRearWinCut",
+      "suppressed": false,
+      "param_names": [
+        "d39",
+        "d40",
+        "d41"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "box",
+      "corner": [
+        -107.0,
+        -31.0,
+        25.0
+      ],
+      "length": "6",
+      "width": "22",
+      "height": "6.5",
+      "operation": "cut"
+    },
+    {
+      "id": 34,
+      "name": "TruckCabHollow",
+      "suppressed": false,
+      "param_names": [
+        "d42",
+        "d43",
+        "d44"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "box",
+      "corner": [
+        -102.5,
+        -33.5,
+        14.0
+      ],
+      "length": "14",
+      "width": "27",
+      "height": "18.5",
+      "operation": "cut"
+    },
+    {
+      "id": 35,
+      "name": "WheelWellRL",
+      "suppressed": false,
+      "param_names": [
+        "d45",
+        "d46"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "cylinder",
+      "base": [
+        -138.0,
+        -9.5,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "10.2",
+      "height": "8",
+      "operation": "cut"
+    },
+    {
+      "id": 36,
+      "name": "WheelWellRR",
+      "suppressed": false,
+      "param_names": [
+        "d47",
+        "d48"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "cylinder",
+      "base": [
+        -138.0,
+        -38.5,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "10.2",
+      "height": "8",
+      "operation": "cut"
+    },
+    {
+      "id": 37,
+      "name": "WheelWellFL",
+      "suppressed": false,
+      "param_names": [
+        "d49",
+        "d50"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "cylinder",
+      "base": [
+        -84.0,
+        -9.5,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "10.2",
+      "height": "8",
+      "operation": "cut"
+    },
+    {
+      "id": 38,
+      "name": "WheelWellFR",
+      "suppressed": false,
+      "param_names": [
+        "d51",
+        "d52"
+      ],
+      "participants": [
+        "Truck Body"
+      ],
+      "type": "cylinder",
+      "base": [
+        -84.0,
+        -38.5,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "10.2",
+      "height": "8",
+      "operation": "cut"
+    },
+    {
+      "id": 39,
+      "name": "TruckGlassSk",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "custom",
+        "plane": {
+          "origin": [
+            -110.0,
+            -20.0,
+            0.0
+          ],
+          "x_dir": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "y_dir": [
+            -0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "l1.start",
+            "pos": [
+              6.8,
+              23.2
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l1.end",
+            "pos": [
+              26.8,
+              23.2
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l2.end",
+            "pos": [
+              19.8,
+              33.2
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l3.end",
+            "pos": [
+              6.8,
+              33.2
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [],
+        "counters": {
+          "l": 4
+        }
+      }
+    },
+    {
+      "id": 40,
+      "name": "TruckGlassExt",
+      "suppressed": false,
+      "body_names": [
+        "Truck Glass"
+      ],
+      "param_names": [
+        "d53"
+      ],
+      "type": "extrude",
+      "sketch": 39,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "30.6",
+        "convention": "total_distance",
+        "direction": "symmetric"
+      },
+      "operation": "new_body"
+    },
+    {
+      "id": 41,
+      "name": "TruckSeatBox",
+      "suppressed": false,
+      "body_names": [
+        "Truck Seat"
+      ],
+      "param_names": [
+        "d54",
+        "d55",
+        "d56"
+      ],
+      "type": "box",
+      "corner": [
+        -102.0,
+        -32.5,
+        14.0
+      ],
+      "length": "8",
+      "width": "25",
+      "height": "13",
+      "operation": "new_body"
+    },
+    {
+      "id": 42,
+      "name": "TruckChassisFrame",
+      "suppressed": false,
+      "body_names": [
+        "Truck Chassis"
+      ],
+      "param_names": [
+        "d57",
+        "d58",
+        "d59"
+      ],
+      "type": "box",
+      "corner": [
+        -150.0,
+        -30.0,
+        5.8
+      ],
+      "length": "80",
+      "width": "20",
+      "height": "1.8",
+      "operation": "new_body"
+    },
+    {
+      "id": 43,
+      "name": "TruckSideSteps",
+      "suppressed": false,
+      "param_names": [
+        "d60",
+        "d61",
+        "d62"
+      ],
+      "participants": [
+        "Truck Chassis"
+      ],
+      "type": "box",
+      "corner": [
+        -125.0,
+        -37.2,
+        5.8
+      ],
+      "length": "28",
+      "width": "34.4",
+      "height": "1.7",
+      "operation": "join"
+    },
+    {
+      "id": 44,
+      "name": "FrontBumperBox",
+      "suppressed": false,
+      "body_names": [
+        "Front Bumper"
+      ],
+      "param_names": [
+        "d63",
+        "d64",
+        "d65"
+      ],
+      "type": "box",
+      "corner": [
+        -69.2,
+        -37.8,
+        6.2
+      ],
+      "length": "2.8",
+      "width": "35.6",
+      "height": "3.8",
+      "operation": "new_body"
+    },
+    {
+      "id": 45,
+      "name": "RearBumperBox",
+      "suppressed": false,
+      "body_names": [
+        "Rear Bumper"
+      ],
+      "param_names": [
+        "d66",
+        "d67",
+        "d68"
+      ],
+      "type": "box",
+      "corner": [
+        -153.6,
+        -37.8,
+        6.2
+      ],
+      "length": "2.8",
+      "width": "35.6",
+      "height": "3.6",
+      "operation": "new_body"
+    },
+    {
+      "id": 46,
+      "name": "FrontGrilleBox",
+      "suppressed": false,
+      "body_names": [
+        "Front Grille"
+      ],
+      "param_names": [
+        "d69",
+        "d70",
+        "d71"
+      ],
+      "type": "box",
+      "corner": [
+        -68.4,
+        -30.5,
+        11.5
+      ],
+      "length": "1",
+      "width": "21",
+      "height": "7.2",
+      "operation": "new_body"
+    },
+    {
+      "id": 47,
+      "name": "HeadlightL",
+      "suppressed": false,
+      "body_names": [
+        "Headlight L"
+      ],
+      "param_names": [
+        "d72",
+        "d73"
+      ],
+      "type": "cylinder",
+      "base": [
+        -68.4,
+        -6.2,
+        15.5
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "2.3",
+      "height": "1.1",
+      "operation": "new_body"
+    },
+    {
+      "id": 48,
+      "name": "HeadlightR",
+      "suppressed": false,
+      "body_names": [
+        "Headlight R"
+      ],
+      "param_names": [
+        "d74",
+        "d75"
+      ],
+      "type": "cylinder",
+      "base": [
+        -68.4,
+        -33.8,
+        15.5
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "2.3",
+      "height": "1.1",
+      "operation": "new_body"
+    },
+    {
+      "id": 49,
+      "name": "TaillightL",
+      "suppressed": false,
+      "body_names": [
+        "Taillight L"
+      ],
+      "param_names": [
+        "d76",
+        "d77",
+        "d78"
+      ],
+      "type": "box",
+      "corner": [
+        -152.6,
+        -6.2,
+        13.5
+      ],
+      "length": "0.9",
+      "width": "2.6",
+      "height": "6.2",
+      "operation": "new_body"
+    },
+    {
+      "id": 50,
+      "name": "TaillightR",
+      "suppressed": false,
+      "body_names": [
+        "Taillight R"
+      ],
+      "param_names": [
+        "d79",
+        "d80",
+        "d81"
+      ],
+      "type": "box",
+      "corner": [
+        -152.6,
+        -36.4,
+        13.5
+      ],
+      "length": "0.9",
+      "width": "2.6",
+      "height": "6.2",
+      "operation": "new_body"
+    },
+    {
+      "id": 51,
+      "name": "AxleRear",
+      "suppressed": false,
+      "body_names": [
+        "Axle Rear"
+      ],
+      "param_names": [
+        "d82",
+        "d83"
+      ],
+      "type": "cylinder",
+      "base": [
+        -138.0,
+        -37.8,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "1.6",
+      "height": "35.6",
+      "operation": "new_body"
+    },
+    {
+      "id": 52,
+      "name": "AxleFront",
+      "suppressed": false,
+      "body_names": [
+        "Axle Front"
+      ],
+      "param_names": [
+        "d84",
+        "d85"
+      ],
+      "type": "cylinder",
+      "base": [
+        -84.0,
+        -37.8,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "1.6",
+      "height": "35.6",
+      "operation": "new_body"
+    },
+    {
+      "id": 53,
+      "name": "TireRL",
+      "suppressed": false,
+      "body_names": [
+        "Tire RL"
+      ],
+      "param_names": [
+        "d86",
+        "d87"
+      ],
+      "type": "cylinder",
+      "base": [
+        -138.0,
+        -8.5,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "8.5",
+      "height": "6",
+      "operation": "new_body"
+    },
+    {
+      "id": 54,
+      "name": "TireRLFillet",
+      "suppressed": false,
+      "param_names": [
+        "d88"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -146.49607233600113,
+            -8.500000000000002,
+            0.00022836320454573631
+          ],
+          "max": [
+            -129.50392766399887,
+            -2.4999999999999987,
+            16.999771636795455
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -146.49607233600113,
+            -8.500000000000002,
+            0.00022836320454573631
+          ],
+          "max": [
+            -129.50392766399887,
+            -2.4999999999999987,
+            16.999771636795455
+          ]
+        }
+      ],
+      "edge_names": [
+        "F53:side#2|F53:top",
+        "F53:bottom|F53:side#2"
+      ],
+      "type": "fillet",
+      "edges": [
+        [
+          -138.0,
+          -2.5,
+          17.0
+        ],
+        [
+          -138.0,
+          -8.5,
+          17.0
+        ]
+      ],
+      "radius": "1.4"
+    },
+    {
+      "id": 55,
+      "name": "TireRR",
+      "suppressed": false,
+      "body_names": [
+        "Tire RR"
+      ],
+      "param_names": [
+        "d89",
+        "d90"
+      ],
+      "type": "cylinder",
+      "base": [
+        -138.0,
+        -37.5,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "8.5",
+      "height": "6",
+      "operation": "new_body"
+    },
+    {
+      "id": 56,
+      "name": "TireRRFillet",
+      "suppressed": false,
+      "param_names": [
+        "d91"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -146.49607233600113,
+            -37.500000000000014,
+            0.00022836320454568574
+          ],
+          "max": [
+            -129.50392766399887,
+            -31.499999999999986,
+            16.99977163679545
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -146.49607233600113,
+            -37.500000000000014,
+            0.00022836320454568574
+          ],
+          "max": [
+            -129.50392766399887,
+            -31.499999999999986,
+            16.99977163679545
+          ]
+        }
+      ],
+      "edge_names": [
+        "F55:bottom|F55:side#2",
+        "F55:side#2|F55:top"
+      ],
+      "type": "fillet",
+      "edges": [
+        [
+          -138.0,
+          -37.5,
+          17.0
+        ],
+        [
+          -138.0,
+          -31.5,
+          17.0
+        ]
+      ],
+      "radius": "1.4"
+    },
+    {
+      "id": 57,
+      "name": "TireFL",
+      "suppressed": false,
+      "body_names": [
+        "Tire FL"
+      ],
+      "param_names": [
+        "d92",
+        "d93"
+      ],
+      "type": "cylinder",
+      "base": [
+        -84.0,
+        -8.5,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "8.5",
+      "height": "6",
+      "operation": "new_body"
+    },
+    {
+      "id": 58,
+      "name": "TireFLFillet",
+      "suppressed": false,
+      "param_names": [
+        "d94"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -92.49607233600112,
+            -8.500000000000004,
+            0.00022836320455155157
+          ],
+          "max": [
+            -75.50392766399885,
+            -2.4999999999999973,
+            16.999771636795465
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -92.49607233600112,
+            -8.500000000000004,
+            0.00022836320455155157
+          ],
+          "max": [
+            -75.50392766399885,
+            -2.4999999999999973,
+            16.999771636795465
+          ]
+        }
+      ],
+      "edge_names": [
+        "F57:side#2|F57:top",
+        "F57:bottom|F57:side#2"
+      ],
+      "type": "fillet",
+      "edges": [
+        [
+          -84.0,
+          -2.5,
+          17.0
+        ],
+        [
+          -84.0,
+          -8.5,
+          17.0
+        ]
+      ],
+      "radius": "1.4"
+    },
+    {
+      "id": 59,
+      "name": "TireFR",
+      "suppressed": false,
+      "body_names": [
+        "Tire FR"
+      ],
+      "param_names": [
+        "d95",
+        "d96"
+      ],
+      "type": "cylinder",
+      "base": [
+        -84.0,
+        -37.5,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "8.5",
+      "height": "6",
+      "operation": "new_body"
+    },
+    {
+      "id": 60,
+      "name": "TireFRFillet",
+      "suppressed": false,
+      "param_names": [
+        "d97"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -92.49607233600112,
+            -37.500000000000256,
+            0.00022836320455155157
+          ],
+          "max": [
+            -75.50392766399885,
+            -31.49999999999998,
+            16.99977163679546
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -92.49607233600112,
+            -37.500000000000256,
+            0.00022836320455155157
+          ],
+          "max": [
+            -75.50392766399885,
+            -31.49999999999998,
+            16.99977163679546
+          ]
+        }
+      ],
+      "edge_names": [
+        "F59:bottom|F59:side#2",
+        "F59:side#2|F59:top"
+      ],
+      "type": "fillet",
+      "edges": [
+        [
+          -84.0,
+          -37.5,
+          17.0
+        ],
+        [
+          -84.0,
+          -31.5,
+          17.0
+        ]
+      ],
+      "radius": "1.4"
+    },
+    {
+      "id": 61,
+      "name": "RimRL",
+      "suppressed": false,
+      "body_names": [
+        "Rim RL"
+      ],
+      "param_names": [
+        "d98",
+        "d99"
+      ],
+      "type": "cylinder",
+      "base": [
+        -138.0,
+        -2.6,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "4.8",
+      "height": "0.7",
+      "operation": "new_body"
+    },
+    {
+      "id": 62,
+      "name": "RimRR",
+      "suppressed": false,
+      "body_names": [
+        "Rim RR"
+      ],
+      "param_names": [
+        "d100",
+        "d101"
+      ],
+      "type": "cylinder",
+      "base": [
+        -138.0,
+        -38.1,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "4.8",
+      "height": "0.7",
+      "operation": "new_body"
+    },
+    {
+      "id": 63,
+      "name": "RimFL",
+      "suppressed": false,
+      "body_names": [
+        "Rim FL"
+      ],
+      "param_names": [
+        "d102",
+        "d103"
+      ],
+      "type": "cylinder",
+      "base": [
+        -84.0,
+        -2.6,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "4.8",
+      "height": "0.7",
+      "operation": "new_body"
+    },
+    {
+      "id": 64,
+      "name": "RimFR",
+      "suppressed": false,
+      "body_names": [
+        "Rim FR"
+      ],
+      "param_names": [
+        "d104",
+        "d105"
+      ],
+      "type": "cylinder",
+      "base": [
+        -84.0,
+        -38.1,
+        8.5
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "4.8",
+      "height": "0.7",
+      "operation": "new_body"
+    },
+    {
+      "id": 67,
+      "name": "BodyTransfer8",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Truck Body"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 68,
+      "name": "BodyTransfer9",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Truck Glass"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 69,
+      "name": "BodyTransfer10",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Truck Seat"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 70,
+      "name": "BodyTransfer11",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Truck Chassis"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 71,
+      "name": "BodyTransfer12",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Front Bumper"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 72,
+      "name": "BodyTransfer13",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Rear Bumper"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 73,
+      "name": "BodyTransfer14",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Front Grille"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 74,
+      "name": "BodyTransfer15",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Headlight L"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 75,
+      "name": "BodyTransfer16",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Headlight R"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 76,
+      "name": "BodyTransfer17",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Taillight L"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 77,
+      "name": "BodyTransfer18",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Taillight R"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 78,
+      "name": "BodyTransfer19",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Axle Rear"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 79,
+      "name": "BodyTransfer20",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Axle Front"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 80,
+      "name": "BodyTransfer21",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Tire RL"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 81,
+      "name": "BodyTransfer22",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Tire RR"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 82,
+      "name": "BodyTransfer23",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Tire FL"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 83,
+      "name": "BodyTransfer24",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Tire FR"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 84,
+      "name": "BodyTransfer25",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Rim RL"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 85,
+      "name": "BodyTransfer26",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Rim RR"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 86,
+      "name": "BodyTransfer27",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Rim FL"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 87,
+      "name": "BodyTransfer28",
+      "suppressed": false,
+      "component": 65,
+      "type": "body_transfer",
+      "bodies": [
+        "Rim FR"
+      ],
+      "from": 0,
+      "to": 65,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 88,
+      "name": "BaseFlange",
+      "suppressed": false,
+      "body_names": [
+        "Base Casting"
+      ],
+      "param_names": [
+        "d106",
+        "d107"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        65.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "44",
+      "height": "7",
+      "operation": "new_body"
+    },
+    {
+      "id": 89,
+      "name": "BaseFlangeFillet",
+      "suppressed": false,
+      "param_names": [
+        "d108"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            -43.979668562829396,
+            21.001182115411734,
+            0.0
+          ],
+          "max": [
+            43.97966856282939,
+            108.99881788458826,
+            7.000000000000003
+          ]
+        }
+      ],
+      "edge_names": [
+        "F88:side#1|F88:top"
+      ],
+      "type": "fillet",
+      "edges": [
+        [
+          0.0,
+          21.0,
+          7.0
+        ]
+      ],
+      "radius": "1.8"
+    },
+    {
+      "id": 90,
+      "name": "BaseColumn",
+      "suppressed": false,
+      "param_names": [
+        "d109",
+        "d110"
+      ],
+      "participants": [
+        "Base Casting"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        65.0,
+        7.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "33",
+      "height": "21",
+      "operation": "join"
+    },
+    {
+      "id": 91,
+      "name": "BaseJunctionBox",
+      "suppressed": false,
+      "param_names": [
+        "d111",
+        "d112",
+        "d113"
+      ],
+      "participants": [
+        "Base Casting"
+      ],
+      "type": "box",
+      "corner": [
+        -15.0,
+        92.0,
+        6.0
+      ],
+      "length": "30",
+      "width": "18",
+      "height": "18",
+      "operation": "join"
+    },
+    {
+      "id": 92,
+      "name": "BaseCableGland",
+      "suppressed": false,
+      "body_names": [
+        "Cable Gland"
+      ],
+      "param_names": [
+        "d114",
+        "d115"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        110.0,
+        15.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius": "5",
+      "height": "7",
+      "operation": "new_body"
+    },
+    {
+      "id": 93,
+      "name": "BaseBolt1",
+      "suppressed": false,
+      "body_names": [
+        "Base Bolt 1"
+      ],
+      "param_names": [
+        "d116",
+        "d117"
+      ],
+      "type": "cylinder",
+      "base": [
+        37.5,
+        65.0,
+        7.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "2.6",
+      "height": "2.8",
+      "operation": "new_body"
+    },
+    {
+      "id": 94,
+      "name": "BaseBolt2",
+      "suppressed": false,
+      "body_names": [
+        "Base Bolt 2"
+      ],
+      "param_names": [
+        "d118",
+        "d119"
+      ],
+      "type": "cylinder",
+      "base": [
+        -37.5,
+        65.0,
+        7.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "2.6",
+      "height": "2.8",
+      "operation": "new_body"
+    },
+    {
+      "id": 95,
+      "name": "BaseBolt3",
+      "suppressed": false,
+      "body_names": [
+        "Base Bolt 3"
+      ],
+      "param_names": [
+        "d120",
+        "d121"
+      ],
+      "type": "cylinder",
+      "base": [
+        18.75,
+        97.48,
+        7.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "2.6",
+      "height": "2.8",
+      "operation": "new_body"
+    },
+    {
+      "id": 96,
+      "name": "BaseBolt4",
+      "suppressed": false,
+      "body_names": [
+        "Base Bolt 4"
+      ],
+      "param_names": [
+        "d122",
+        "d123"
+      ],
+      "type": "cylinder",
+      "base": [
+        -18.75,
+        97.48,
+        7.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "2.6",
+      "height": "2.8",
+      "operation": "new_body"
+    },
+    {
+      "id": 97,
+      "name": "BaseBolt5",
+      "suppressed": false,
+      "body_names": [
+        "Base Bolt 5"
+      ],
+      "param_names": [
+        "d124",
+        "d125"
+      ],
+      "type": "cylinder",
+      "base": [
+        18.75,
+        32.52,
+        7.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "2.6",
+      "height": "2.8",
+      "operation": "new_body"
+    },
+    {
+      "id": 98,
+      "name": "BaseBolt6",
+      "suppressed": false,
+      "body_names": [
+        "Base Bolt 6"
+      ],
+      "param_names": [
+        "d126",
+        "d127"
+      ],
+      "type": "cylinder",
+      "base": [
+        -18.75,
+        32.52,
+        7.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "2.6",
+      "height": "2.8",
+      "operation": "new_body"
+    },
+    {
+      "id": 99,
+      "name": "BaseBearingRing",
+      "suppressed": false,
+      "body_names": [
+        "Base Bearing Ring"
+      ],
+      "param_names": [
+        "d128",
+        "d129"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        65.0,
+        28.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "31.5",
+      "height": "3",
+      "operation": "new_body"
+    },
+    {
+      "id": 100,
+      "name": "TurretDrum",
+      "suppressed": false,
+      "body_names": [
+        "Turret Yoke"
+      ],
+      "param_names": [
+        "d130",
+        "d131"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        65.0,
+        31.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "32",
+      "height": "12",
+      "operation": "new_body"
+    },
+    {
+      "id": 101,
+      "name": "TurretYokeSk",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "origin",
+        "name": "YZ"
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "l1.start",
+            "pos": [
+              43.0,
+              41.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l1.end",
+            "pos": [
+              87.0,
+              41.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l2.end",
+            "pos": [
+              82.0,
+              68.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l3.end",
+            "pos": [
+              48.0,
+              68.0
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [],
+        "counters": {
+          "l": 4
+        }
+      }
+    },
+    {
+      "id": 102,
+      "name": "TurretYokeRiser",
+      "suppressed": false,
+      "param_names": [
+        "d132"
+      ],
+      "type": "extrude",
+      "sketch": 101,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "48",
+        "convention": "total_distance",
+        "direction": "symmetric"
+      },
+      "operation": "join",
+      "targets": [
+        "Turret Yoke"
+      ]
+    },
+    {
+      "id": 103,
+      "name": "TurretTopBoss",
+      "suppressed": false,
+      "param_names": [
+        "d133",
+        "d134"
+      ],
+      "participants": [
+        "Turret Yoke"
+      ],
+      "type": "cylinder",
+      "base": [
+        -24.0,
+        65.0,
+        68.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "18",
+      "height": "48",
+      "operation": "join"
+    },
+    {
+      "id": 104,
+      "name": "TurretSlotCut",
+      "suppressed": false,
+      "param_names": [
+        "d135",
+        "d136",
+        "d137"
+      ],
+      "participants": [
+        "Turret Yoke"
+      ],
+      "type": "box",
+      "corner": [
+        -13.0,
+        42.0,
+        47.0
+      ],
+      "length": "26",
+      "width": "46",
+      "height": "42",
+      "operation": "cut"
+    },
+    {
+      "id": 105,
+      "name": "ShoulderMotorCan",
+      "suppressed": false,
+      "body_names": [
+        "Shoulder Motor"
+      ],
+      "param_names": [
+        "d138",
+        "d139"
+      ],
+      "type": "cylinder",
+      "base": [
+        24.0,
+        65.0,
+        68.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "15",
+      "height": "14",
+      "operation": "new_body"
+    },
+    {
+      "id": 106,
+      "name": "ShoulderMotorFillet",
+      "suppressed": false,
+      "param_names": [
+        "d140"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "min": [
+            23.999999999999986,
+            50.00693117176267,
+            53.00040299389037
+          ],
+          "max": [
+            38.000000000000014,
+            79.99306882823727,
+            82.99959700610965
+          ]
+        }
+      ],
+      "edge_names": [
+        "F105:side#2|F105:top"
+      ],
+      "type": "fillet",
+      "edges": [
+        [
+          38.0,
+          65.0,
+          83.0
+        ]
+      ],
+      "radius": "2"
+    },
+    {
+      "id": 107,
+      "name": "ShoulderCapL",
+      "suppressed": false,
+      "body_names": [
+        "Shoulder Cap L"
+      ],
+      "param_names": [
+        "d141",
+        "d142"
+      ],
+      "type": "cylinder",
+      "base": [
+        -26.5,
+        65.0,
+        68.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "13",
+      "height": "2.5",
+      "operation": "new_body"
+    },
+    {
+      "id": 108,
+      "name": "ShoulderCapR",
+      "suppressed": false,
+      "body_names": [
+        "Shoulder Cap R"
+      ],
+      "param_names": [
+        "d143",
+        "d144"
+      ],
+      "type": "cylinder",
+      "base": [
+        38.0,
+        65.0,
+        68.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "11.5",
+      "height": "2",
+      "operation": "new_body"
+    },
+    {
+      "id": 109,
+      "name": "UpperArmKnuckleLow",
+      "suppressed": false,
+      "body_names": [
+        "Upper Arm Body"
+      ],
+      "param_names": [
+        "d145",
+        "d146"
+      ],
+      "type": "cylinder",
+      "base": [
+        -12.0,
+        65.0,
+        68.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "16.5",
+      "height": "24",
+      "operation": "new_body"
+    },
+    {
+      "id": 110,
+      "name": "UpperArmBeamSk",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "origin",
+        "name": "YZ"
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "l1.start",
+            "pos": [
+              49.0,
+              68.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l1.end",
+            "pos": [
+              81.0,
+              68.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l2.end",
+            "pos": [
+              78.5,
+              173.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l3.end",
+            "pos": [
+              51.5,
+              173.0
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [],
+        "counters": {
+          "l": 4
+        }
+      }
+    },
+    {
+      "id": 111,
+      "name": "UpperArmBeamExt",
+      "suppressed": false,
+      "param_names": [
+        "d147"
+      ],
+      "type": "extrude",
+      "sketch": 110,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "24",
+        "convention": "total_distance",
+        "direction": "symmetric"
+      },
+      "operation": "join",
+      "targets": [
+        "Upper Arm Body"
+      ]
+    },
+    {
+      "id": 112,
+      "name": "UpperArmKnuckleHigh",
+      "suppressed": false,
+      "param_names": [
+        "d148",
+        "d149"
+      ],
+      "participants": [
+        "Upper Arm Body"
+      ],
+      "type": "cylinder",
+      "base": [
+        -12.0,
+        65.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "14",
+      "height": "24",
+      "operation": "join"
+    },
+    {
+      "id": 113,
+      "name": "UpperArmPocketRSk",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "custom",
+        "plane": {
+          "origin": [
+            12.0,
+            65.0,
+            120.5
+          ],
+          "x_dir": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "y_dir": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "p1",
+            "pos": [
+              6.5,
+              -23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p2",
+            "pos": [
+              6.5,
+              23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p3",
+            "pos": [
+              -6.5,
+              23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p4",
+            "pos": [
+              -6.5,
+              -23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "a1.center",
+            "pos": [
+              0.0,
+              23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "a2.center",
+            "pos": [
+              0.0,
+              -23.5
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "a1",
+            "type": "arc",
+            "c": 5,
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "a2",
+            "type": "arc",
+            "c": 6,
+            "a": 4,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [
+          {
+            "id": "k1",
+            "type": "tangent",
+            "a": 0,
+            "b": 1
+          },
+          {
+            "id": "k2",
+            "type": "tangent",
+            "a": 2,
+            "b": 1
+          },
+          {
+            "id": "k3",
+            "type": "tangent",
+            "a": 0,
+            "b": 3
+          },
+          {
+            "id": "k4",
+            "type": "tangent",
+            "a": 2,
+            "b": 3
+          },
+          {
+            "id": "k5",
+            "type": "equal",
+            "a": 3,
+            "b": 1
+          }
+        ],
+        "counters": {
+          "a": 2,
+          "k": 5,
+          "l": 2,
+          "p": 4
+        }
+      }
+    },
+    {
+      "id": 114,
+      "name": "UpperArmPocketRCut",
+      "suppressed": false,
+      "param_names": [
+        "d150"
+      ],
+      "type": "extrude",
+      "sketch": 113,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "3.5",
+        "convention": "total_distance",
+        "direction": "negative"
+      },
+      "operation": "cut",
+      "targets": [
+        "Upper Arm Body"
+      ]
+    },
+    {
+      "id": 115,
+      "name": "UpperArmPocketLSk",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "custom",
+        "plane": {
+          "origin": [
+            -8.5,
+            65.0,
+            120.5
+          ],
+          "x_dir": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "y_dir": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "p1",
+            "pos": [
+              6.5,
+              -23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p2",
+            "pos": [
+              6.5,
+              23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p3",
+            "pos": [
+              -6.5,
+              23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "p4",
+            "pos": [
+              -6.5,
+              -23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "a1.center",
+            "pos": [
+              0.0,
+              23.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "a2.center",
+            "pos": [
+              0.0,
+              -23.5
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "a1",
+            "type": "arc",
+            "c": 5,
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "a2",
+            "type": "arc",
+            "c": 6,
+            "a": 4,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [
+          {
+            "id": "k1",
+            "type": "tangent",
+            "a": 0,
+            "b": 1
+          },
+          {
+            "id": "k2",
+            "type": "tangent",
+            "a": 2,
+            "b": 1
+          },
+          {
+            "id": "k3",
+            "type": "tangent",
+            "a": 0,
+            "b": 3
+          },
+          {
+            "id": "k4",
+            "type": "tangent",
+            "a": 2,
+            "b": 3
+          },
+          {
+            "id": "k5",
+            "type": "equal",
+            "a": 3,
+            "b": 1
+          }
+        ],
+        "counters": {
+          "a": 2,
+          "k": 5,
+          "l": 2,
+          "p": 4
+        }
+      }
+    },
+    {
+      "id": 116,
+      "name": "UpperArmPocketLCut",
+      "suppressed": false,
+      "param_names": [
+        "d151"
+      ],
+      "type": "extrude",
+      "sketch": 115,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "4",
+        "convention": "total_distance",
+        "direction": "negative"
+      },
+      "operation": "cut",
+      "targets": [
+        "Upper Arm Body"
+      ]
+    },
+    {
+      "id": 117,
+      "name": "ForearmEarL",
+      "suppressed": false,
+      "body_names": [
+        "Forearm Body"
+      ],
+      "param_names": [
+        "d152",
+        "d153"
+      ],
+      "type": "cylinder",
+      "base": [
+        -20.0,
+        65.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "14.5",
+      "height": "7.5",
+      "operation": "new_body"
+    },
+    {
+      "id": 118,
+      "name": "ForearmEarR",
+      "suppressed": false,
+      "param_names": [
+        "d154",
+        "d155"
+      ],
+      "participants": [
+        "Forearm Body"
+      ],
+      "type": "cylinder",
+      "base": [
+        12.5,
+        65.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "14.5",
+      "height": "7.5",
+      "operation": "join"
+    },
+    {
+      "id": 119,
+      "name": "ForearmCheekL",
+      "suppressed": false,
+      "param_names": [
+        "d156",
+        "d157",
+        "d158"
+      ],
+      "participants": [
+        "Forearm Body"
+      ],
+      "type": "box",
+      "corner": [
+        -20.0,
+        42.0,
+        160.0
+      ],
+      "length": "7.5",
+      "width": "23",
+      "height": "26",
+      "operation": "join"
+    },
+    {
+      "id": 120,
+      "name": "ForearmCheekR",
+      "suppressed": false,
+      "param_names": [
+        "d159",
+        "d160",
+        "d161"
+      ],
+      "participants": [
+        "Forearm Body"
+      ],
+      "type": "box",
+      "corner": [
+        12.5,
+        42.0,
+        160.0
+      ],
+      "length": "7.5",
+      "width": "23",
+      "height": "26",
+      "operation": "join"
+    },
+    {
+      "id": 121,
+      "name": "ForearmBarrelSk",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "origin",
+        "name": "YZ"
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "l1.start",
+            "pos": [
+              47.0,
+              159.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l1.end",
+            "pos": [
+              47.0,
+              186.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l2.end",
+            "pos": [
+              -27.0,
+              183.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l3.end",
+            "pos": [
+              -27.0,
+              163.0
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [],
+        "counters": {
+          "l": 4
+        }
+      }
+    },
+    {
+      "id": 122,
+      "name": "ForearmBarrelExt",
+      "suppressed": false,
+      "param_names": [
+        "d162"
+      ],
+      "type": "extrude",
+      "sketch": 121,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "34",
+        "convention": "total_distance",
+        "direction": "symmetric"
+      },
+      "operation": "join",
+      "targets": [
+        "Forearm Body"
+      ]
+    },
+    {
+      "id": 123,
+      "name": "ForearmWristCheekL",
+      "suppressed": false,
+      "param_names": [
+        "d163",
+        "d164",
+        "d165"
+      ],
+      "participants": [
+        "Forearm Body"
+      ],
+      "type": "box",
+      "corner": [
+        -15.0,
+        -40.0,
+        162.0
+      ],
+      "length": "6",
+      "width": "15",
+      "height": "22",
+      "operation": "join"
+    },
+    {
+      "id": 124,
+      "name": "ForearmWristCheekR",
+      "suppressed": false,
+      "param_names": [
+        "d166",
+        "d167",
+        "d168"
+      ],
+      "participants": [
+        "Forearm Body"
+      ],
+      "type": "box",
+      "corner": [
+        9.0,
+        -40.0,
+        162.0
+      ],
+      "length": "6",
+      "width": "15",
+      "height": "22",
+      "operation": "join"
+    },
+    {
+      "id": 125,
+      "name": "ForearmWristEarL",
+      "suppressed": false,
+      "param_names": [
+        "d169",
+        "d170"
+      ],
+      "participants": [
+        "Forearm Body"
+      ],
+      "type": "cylinder",
+      "base": [
+        -15.0,
+        -40.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "11",
+      "height": "6",
+      "operation": "join"
+    },
+    {
+      "id": 126,
+      "name": "ForearmWristEarR",
+      "suppressed": false,
+      "param_names": [
+        "d171",
+        "d172"
+      ],
+      "participants": [
+        "Forearm Body"
+      ],
+      "type": "cylinder",
+      "base": [
+        9.0,
+        -40.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "11",
+      "height": "6",
+      "operation": "join"
+    },
+    {
+      "id": 127,
+      "name": "ElbowMotorCan",
+      "suppressed": false,
+      "body_names": [
+        "Elbow Motor"
+      ],
+      "param_names": [
+        "d173",
+        "d174"
+      ],
+      "type": "cylinder",
+      "base": [
+        -33.0,
+        65.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "12.5",
+      "height": "13",
+      "operation": "new_body"
+    },
+    {
+      "id": 128,
+      "name": "ElbowCapDisc",
+      "suppressed": false,
+      "body_names": [
+        "Elbow Cap"
+      ],
+      "param_names": [
+        "d175",
+        "d176"
+      ],
+      "type": "cylinder",
+      "base": [
+        -35.0,
+        65.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "10",
+      "height": "2",
+      "operation": "new_body"
+    },
+    {
+      "id": 129,
+      "name": "ForearmConduitBox",
+      "suppressed": false,
+      "body_names": [
+        "Forearm Conduit"
+      ],
+      "param_names": [
+        "d177",
+        "d178",
+        "d179"
+      ],
+      "type": "box",
+      "corner": [
+        -9.0,
+        -18.0,
+        185.0
+      ],
+      "length": "18",
+      "width": "60",
+      "height": "5",
+      "operation": "new_body"
+    },
+    {
+      "id": 130,
+      "name": "WristMotorCan",
+      "suppressed": false,
+      "body_names": [
+        "Wrist Motor"
+      ],
+      "param_names": [
+        "d180",
+        "d181"
+      ],
+      "type": "cylinder",
+      "base": [
+        15.0,
+        -40.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "9.5",
+      "height": "9",
+      "operation": "new_body"
+    },
+    {
+      "id": 131,
+      "name": "WristPitchBarrel",
+      "suppressed": false,
+      "body_names": [
+        "Wrist Housing"
+      ],
+      "param_names": [
+        "d182",
+        "d183"
+      ],
+      "type": "cylinder",
+      "base": [
+        -8.5,
+        -40.0,
+        173.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius": "10.5",
+      "height": "17",
+      "operation": "new_body"
+    },
+    {
+      "id": 132,
+      "name": "WristNeckCyl",
+      "suppressed": false,
+      "param_names": [
+        "d184",
+        "d185"
+      ],
+      "participants": [
+        "Wrist Housing"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        -40.0,
+        153.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "8.5",
+      "height": "20",
+      "operation": "join"
+    },
+    {
+      "id": 133,
+      "name": "WristRollCollar",
+      "suppressed": false,
+      "param_names": [
+        "d186",
+        "d187"
+      ],
+      "participants": [
+        "Wrist Housing"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        -40.0,
+        151.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "12",
+      "height": "3",
+      "operation": "join"
+    },
+    {
+      "id": 134,
+      "name": "GripperIsoFlange",
+      "suppressed": false,
+      "body_names": [
+        "Gripper Flange"
+      ],
+      "param_names": [
+        "d188",
+        "d189"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        -40.0,
+        146.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "13.5",
+      "height": "5",
+      "operation": "new_body"
+    },
+    {
+      "id": 135,
+      "name": "GripperFlangeNeck",
+      "suppressed": false,
+      "param_names": [
+        "d190",
+        "d191"
+      ],
+      "participants": [
+        "Gripper Flange"
+      ],
+      "type": "cylinder",
+      "base": [
+        0.0,
+        -40.0,
+        143.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": "10",
+      "height": "3",
+      "operation": "join"
+    },
+    {
+      "id": 136,
+      "name": "GripperBodyBox",
+      "suppressed": false,
+      "body_names": [
+        "Gripper Body"
+      ],
+      "param_names": [
+        "d192",
+        "d193",
+        "d194"
+      ],
+      "type": "box",
+      "corner": [
+        -13.0,
+        -73.0,
+        129.0
+      ],
+      "length": "26",
+      "width": "66",
+      "height": "14",
+      "operation": "new_body"
+    },
+    {
+      "id": 137,
+      "name": "GripperBodyFillets",
+      "suppressed": false,
+      "param_names": [
+        "d195"
+      ],
+      "edge_refs": [
+        {
+          "dir": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "min": [
+            -13.0,
+            -73.0,
+            129.0
+          ],
+          "max": [
+            13.0,
+            -7.0,
+            143.0
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "min": [
+            -13.0,
+            -73.0,
+            129.0
+          ],
+          "max": [
+            13.0,
+            -7.0,
+            143.0
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "min": [
+            -13.0,
+            -73.0,
+            129.0
+          ],
+          "max": [
+            13.0,
+            -7.0,
+            143.0
+          ]
+        },
+        {
+          "dir": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "min": [
+            -13.0,
+            -73.0,
+            129.0
+          ],
+          "max": [
+            13.0,
+            -7.0,
+            143.0
+          ]
+        }
+      ],
+      "edge_names": [
+        "F136:+x|F136:+y",
+        "F136:+y|F136:-x",
+        "F136:+x|F136:-y",
+        "F136:-x|F136:-y"
+      ],
+      "type": "fillet",
+      "edges": [
+        [
+          13.0,
+          -7.0,
+          136.0
+        ],
+        [
+          -13.0,
+          -7.0,
+          136.0
+        ],
+        [
+          13.0,
+          -73.0,
+          136.0
+        ],
+        [
+          -13.0,
+          -73.0,
+          136.0
+        ]
+      ],
+      "radius": "2.5"
+    },
+    {
+      "id": 138,
+      "name": "GripperGrooveF",
+      "suppressed": false,
+      "param_names": [
+        "d196",
+        "d197",
+        "d198"
+      ],
+      "participants": [
+        "Gripper Body"
+      ],
+      "type": "box",
+      "corner": [
+        12.0,
+        -68.0,
+        134.5
+      ],
+      "length": "2",
+      "width": "56",
+      "height": "3",
+      "operation": "cut"
+    },
+    {
+      "id": 139,
+      "name": "GripperGrooveB",
+      "suppressed": false,
+      "param_names": [
+        "d199",
+        "d200",
+        "d201"
+      ],
+      "participants": [
+        "Gripper Body"
+      ],
+      "type": "box",
+      "corner": [
+        -14.0,
+        -68.0,
+        134.5
+      ],
+      "length": "2",
+      "width": "56",
+      "height": "3",
+      "operation": "cut"
+    },
+    {
+      "id": 140,
+      "name": "GripperRailBox",
+      "suppressed": false,
+      "body_names": [
+        "Gripper Rail"
+      ],
+      "param_names": [
+        "d202",
+        "d203",
+        "d204"
+      ],
+      "type": "box",
+      "corner": [
+        -6.0,
+        -72.0,
+        126.5
+      ],
+      "length": "12",
+      "width": "64",
+      "height": "2.5",
+      "operation": "new_body"
+    },
+    {
+      "id": 141,
+      "name": "FingerJawLSk",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "origin",
+        "name": "YZ"
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "l1.start",
+            "pos": [
+              -20.35,
+              126.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l1.end",
+            "pos": [
+              -10.5,
+              126.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l2.end",
+            "pos": [
+              -10.5,
+              121.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l3.end",
+            "pos": [
+              -13.0,
+              121.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l4.end",
+            "pos": [
+              -16.35,
+              95.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l5.end",
+            "pos": [
+              -20.35,
+              95.0
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 5,
+            "construction": false
+          },
+          {
+            "id": "l5",
+            "type": "line",
+            "a": 5,
+            "b": 6,
+            "construction": false
+          },
+          {
+            "id": "l6",
+            "type": "line",
+            "a": 6,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [],
+        "counters": {
+          "l": 6
+        }
+      }
+    },
+    {
+      "id": 142,
+      "name": "FingerJawLExt",
+      "suppressed": false,
+      "body_names": [
+        "Finger Jaw L"
+      ],
+      "param_names": [
+        "d205"
+      ],
+      "type": "extrude",
+      "sketch": 141,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "16",
+        "convention": "total_distance",
+        "direction": "symmetric"
+      },
+      "operation": "new_body"
+    },
+    {
+      "id": 143,
+      "name": "GripPadLBox",
+      "suppressed": false,
+      "body_names": [
+        "Grip Pad L"
+      ],
+      "param_names": [
+        "d206",
+        "d207",
+        "d208"
+      ],
+      "type": "box",
+      "corner": [
+        -8.0,
+        -22.85,
+        95.0
+      ],
+      "length": "16",
+      "width": "2.5",
+      "height": "16",
+      "operation": "new_body"
+    },
+    {
+      "id": 144,
+      "name": "FingerJawRSk",
+      "suppressed": false,
+      "type": "sketch",
+      "plane": {
+        "type": "origin",
+        "name": "YZ"
+      },
+      "sketch": {
+        "points": [
+          {
+            "id": "origin",
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "fixed": true
+          },
+          {
+            "id": "l1.start",
+            "pos": [
+              -59.65,
+              126.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l1.end",
+            "pos": [
+              -69.5,
+              126.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l2.end",
+            "pos": [
+              -69.5,
+              121.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l3.end",
+            "pos": [
+              -67.0,
+              121.5
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l4.end",
+            "pos": [
+              -63.65,
+              95.0
+            ],
+            "fixed": false
+          },
+          {
+            "id": "l5.end",
+            "pos": [
+              -59.65,
+              95.0
+            ],
+            "fixed": false
+          }
+        ],
+        "curves": [
+          {
+            "id": "l1",
+            "type": "line",
+            "a": 1,
+            "b": 2,
+            "construction": false
+          },
+          {
+            "id": "l2",
+            "type": "line",
+            "a": 2,
+            "b": 3,
+            "construction": false
+          },
+          {
+            "id": "l3",
+            "type": "line",
+            "a": 3,
+            "b": 4,
+            "construction": false
+          },
+          {
+            "id": "l4",
+            "type": "line",
+            "a": 4,
+            "b": 5,
+            "construction": false
+          },
+          {
+            "id": "l5",
+            "type": "line",
+            "a": 5,
+            "b": 6,
+            "construction": false
+          },
+          {
+            "id": "l6",
+            "type": "line",
+            "a": 6,
+            "b": 1,
+            "construction": false
+          }
+        ],
+        "constraints": [],
+        "counters": {
+          "l": 6
+        }
+      }
+    },
+    {
+      "id": 145,
+      "name": "FingerJawRExt",
+      "suppressed": false,
+      "body_names": [
+        "Finger Jaw R"
+      ],
+      "param_names": [
+        "d209"
+      ],
+      "type": "extrude",
+      "sketch": 144,
+      "profiles": {
+        "type": "all"
+      },
+      "extent": {
+        "distance": "16",
+        "convention": "total_distance",
+        "direction": "symmetric"
+      },
+      "operation": "new_body"
+    },
+    {
+      "id": 146,
+      "name": "GripPadRBox",
+      "suppressed": false,
+      "body_names": [
+        "Grip Pad R"
+      ],
+      "param_names": [
+        "d210",
+        "d211",
+        "d212"
+      ],
+      "type": "box",
+      "corner": [
+        -8.0,
+        -59.65,
+        95.0
+      ],
+      "length": "16",
+      "width": "2.5",
+      "height": "16",
+      "operation": "new_body"
+    },
+    {
+      "id": 163,
+      "name": "BodyTransfer29",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Base Casting"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 164,
+      "name": "BodyTransfer30",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Cable Gland"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 165,
+      "name": "BodyTransfer31",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Base Bolt 1"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 166,
+      "name": "BodyTransfer32",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Base Bolt 2"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 167,
+      "name": "BodyTransfer33",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Base Bolt 3"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 168,
+      "name": "BodyTransfer34",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Base Bolt 4"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 169,
+      "name": "BodyTransfer35",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Base Bolt 5"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 170,
+      "name": "BodyTransfer36",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Base Bolt 6"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 171,
+      "name": "BodyTransfer37",
+      "suppressed": false,
+      "component": 147,
+      "type": "body_transfer",
+      "bodies": [
+        "Base Bearing Ring"
+      ],
+      "from": 0,
+      "to": 147,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 172,
+      "name": "BodyTransfer38",
+      "suppressed": false,
+      "component": 149,
+      "type": "body_transfer",
+      "bodies": [
+        "Turret Yoke"
+      ],
+      "from": 0,
+      "to": 149,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 173,
+      "name": "BodyTransfer39",
+      "suppressed": false,
+      "component": 149,
+      "type": "body_transfer",
+      "bodies": [
+        "Shoulder Motor"
+      ],
+      "from": 0,
+      "to": 149,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 174,
+      "name": "BodyTransfer40",
+      "suppressed": false,
+      "component": 149,
+      "type": "body_transfer",
+      "bodies": [
+        "Shoulder Cap L"
+      ],
+      "from": 0,
+      "to": 149,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 175,
+      "name": "BodyTransfer41",
+      "suppressed": false,
+      "component": 149,
+      "type": "body_transfer",
+      "bodies": [
+        "Shoulder Cap R"
+      ],
+      "from": 0,
+      "to": 149,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 176,
+      "name": "BodyTransfer42",
+      "suppressed": false,
+      "component": 151,
+      "type": "body_transfer",
+      "bodies": [
+        "Upper Arm Body"
+      ],
+      "from": 0,
+      "to": 151,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 177,
+      "name": "BodyTransfer43",
+      "suppressed": false,
+      "component": 153,
+      "type": "body_transfer",
+      "bodies": [
+        "Forearm Body"
+      ],
+      "from": 0,
+      "to": 153,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 178,
+      "name": "BodyTransfer44",
+      "suppressed": false,
+      "component": 153,
+      "type": "body_transfer",
+      "bodies": [
+        "Elbow Motor"
+      ],
+      "from": 0,
+      "to": 153,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 179,
+      "name": "BodyTransfer45",
+      "suppressed": false,
+      "component": 153,
+      "type": "body_transfer",
+      "bodies": [
+        "Elbow Cap"
+      ],
+      "from": 0,
+      "to": 153,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 180,
+      "name": "BodyTransfer46",
+      "suppressed": false,
+      "component": 153,
+      "type": "body_transfer",
+      "bodies": [
+        "Forearm Conduit"
+      ],
+      "from": 0,
+      "to": 153,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 181,
+      "name": "BodyTransfer47",
+      "suppressed": false,
+      "component": 153,
+      "type": "body_transfer",
+      "bodies": [
+        "Wrist Motor"
+      ],
+      "from": 0,
+      "to": 153,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 182,
+      "name": "BodyTransfer48",
+      "suppressed": false,
+      "component": 155,
+      "type": "body_transfer",
+      "bodies": [
+        "Wrist Housing"
+      ],
+      "from": 0,
+      "to": 155,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 183,
+      "name": "BodyTransfer49",
+      "suppressed": false,
+      "component": 157,
+      "type": "body_transfer",
+      "bodies": [
+        "Gripper Flange"
+      ],
+      "from": 0,
+      "to": 157,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 184,
+      "name": "BodyTransfer50",
+      "suppressed": false,
+      "component": 157,
+      "type": "body_transfer",
+      "bodies": [
+        "Gripper Body"
+      ],
+      "from": 0,
+      "to": 157,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 185,
+      "name": "BodyTransfer51",
+      "suppressed": false,
+      "component": 157,
+      "type": "body_transfer",
+      "bodies": [
+        "Gripper Rail"
+      ],
+      "from": 0,
+      "to": 157,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 186,
+      "name": "BodyTransfer52",
+      "suppressed": false,
+      "component": 159,
+      "type": "body_transfer",
+      "bodies": [
+        "Finger Jaw L"
+      ],
+      "from": 0,
+      "to": 159,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 187,
+      "name": "BodyTransfer53",
+      "suppressed": false,
+      "component": 159,
+      "type": "body_transfer",
+      "bodies": [
+        "Grip Pad L"
+      ],
+      "from": 0,
+      "to": 159,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 188,
+      "name": "BodyTransfer54",
+      "suppressed": false,
+      "component": 161,
+      "type": "body_transfer",
+      "bodies": [
+        "Finger Jaw R"
+      ],
+      "from": 0,
+      "to": 161,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 189,
+      "name": "BodyTransfer55",
+      "suppressed": false,
+      "component": 161,
+      "type": "body_transfer",
+      "bodies": [
+        "Grip Pad R"
+      ],
+      "from": 0,
+      "to": 161,
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "next_id": 204,
+  "components": [
+    {
+      "id": 16,
+      "identification_color_index": 0,
+      "name": "Grid",
+      "parent": 0
+    },
+    {
+      "id": 65,
+      "identification_color_index": 1,
+      "name": "Truck",
+      "parent": 0
+    },
+    {
+      "id": 147,
+      "identification_color_index": 2,
+      "name": "Arm Base",
+      "parent": 0
+    },
+    {
+      "id": 149,
+      "identification_color_index": 3,
+      "name": "Turret",
+      "parent": 0
+    },
+    {
+      "id": 151,
+      "identification_color_index": 4,
+      "name": "Upper Arm",
+      "parent": 0
+    },
+    {
+      "id": 153,
+      "identification_color_index": 5,
+      "name": "Forearm",
+      "parent": 0
+    },
+    {
+      "id": 155,
+      "identification_color_index": 6,
+      "name": "Wrist",
+      "parent": 0
+    },
+    {
+      "id": 157,
+      "identification_color_index": 7,
+      "name": "Gripper",
+      "parent": 0
+    },
+    {
+      "id": 159,
+      "identification_color_index": 8,
+      "name": "Finger L",
+      "parent": 0
+    },
+    {
+      "id": 161,
+      "identification_color_index": 9,
+      "name": "Finger R",
+      "parent": 0
+    }
+  ],
+  "next_component_color_index": 10,
+  "occurrences": [
+    {
+      "id": 17,
+      "component": 16,
+      "parent": 0,
+      "name": "Grid:1",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "grounded": true
+    },
+    {
+      "id": 66,
+      "component": 65,
+      "parent": 0,
+      "name": "Truck:1",
+      "transform": [
+        [
+          1.0,
+          5.551115123125783e-17,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999999999,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -5.551115123125783e-17,
+          1.0000000000000002,
+          0.0
+        ],
+        [
+          220.00212388884367,
+          0.0016707313626049825,
+          -0.000021151290685139656,
+          1.0
+        ]
+      ],
+      "grounded": false
+    },
+    {
+      "id": 148,
+      "component": 147,
+      "parent": 0,
+      "name": "Arm Base:1",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "grounded": true
+    },
+    {
+      "id": 150,
+      "component": 149,
+      "parent": 0,
+      "name": "Turret:1",
+      "transform": [
+        [
+          0.9510565162951535,
+          0.3090169943749474,
+          0.0,
+          0.0
+        ],
+        [
+          -0.3090169943749474,
+          0.9510565162951535,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          20.08610463437158,
+          3.1813264408150204,
+          0.0,
+          1.0
+        ]
+      ],
+      "grounded": false
+    },
+    {
+      "id": 152,
+      "component": 151,
+      "parent": 0,
+      "name": "Upper Arm:1",
+      "transform": [
+        [
+          0.9510565162951535,
+          0.3090169943749474,
+          0.0,
+          0.0
+        ],
+        [
+          -0.2998378689886651,
+          0.922806073208125,
+          0.24192189559966773,
+          0.0
+        ],
+        [
+          0.07475797705169913,
+          -0.23008139524453983,
+          0.9702957262759965,
+          0.0
+        ],
+        [
+          14.40591904474769,
+          20.66314011810058,
+          -13.705032600746165,
+          1.0
+        ]
+      ],
+      "grounded": false
+    },
+    {
+      "id": 154,
+      "component": 153,
+      "parent": 0,
+      "name": "Forearm:1",
+      "transform": [
+        [
+          0.9510565162951535,
+          0.3090169943749474,
+          0.0,
+          0.0
+        ],
+        [
+          -0.30600966222800385,
+          0.9418008996556874,
+          0.13917310096006547,
+          0.0
+        ],
+        [
+          0.043006853356520526,
+          -0.13236148456107355,
+          0.9902680687415703,
+          0.0
+        ],
+        [
+          20.30003000457061,
+          2.5229318507693534,
+          -10.481576195716286,
+          1.0
+        ]
+      ],
+      "grounded": false
+    },
+    {
+      "id": 156,
+      "component": 155,
+      "parent": 0,
+      "name": "Wrist:1",
+      "transform": [
+        [
+          0.9510565162951535,
+          0.3090169943749474,
+          0.0,
+          0.0
+        ],
+        [
+          -0.3090169943749474,
+          0.9510565162951534,
+          2.7755575615628914e-17,
+          0.0
+        ],
+        [
+          0.0,
+          -5.551115123125783e-17,
+          1.0,
+          0.0
+        ],
+        [
+          27.61992234937092,
+          -20.00538031271772,
+          -17.732124341827245,
+          1.0
+        ]
+      ],
+      "grounded": false
+    },
+    {
+      "id": 158,
+      "component": 157,
+      "parent": 0,
+      "name": "Gripper:1",
+      "transform": [
+        [
+          0.9999999999999999,
+          0.0,
+          -8.576944553888227e-18,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999999998,
+          2.6397121052766746e-17,
+          0.0
+        ],
+        [
+          0.0,
+          -5.551115123125783e-17,
+          1.0,
+          0.0
+        ],
+        [
+          39.980602124368815,
+          -18.047640964523872,
+          -17.732124341827245,
+          1.0
+        ]
+      ],
+      "grounded": false
+    },
+    {
+      "id": 160,
+      "component": 159,
+      "parent": 0,
+      "name": "Finger L:1",
+      "transform": [
+        [
+          0.9999999999999999,
+          0.0,
+          -8.576944553888227e-18,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999999998,
+          2.6397121052766746e-17,
+          0.0
+        ],
+        [
+          0.0,
+          -5.551115123125783e-17,
+          1.0,
+          0.0
+        ],
+        [
+          39.980602124368815,
+          -9.547640964523879,
+          -17.732124341827245,
+          1.0
+        ]
+      ],
+      "grounded": false
+    },
+    {
+      "id": 162,
+      "component": 161,
+      "parent": 0,
+      "name": "Finger R:1",
+      "transform": [
+        [
+          0.9999999999999999,
+          0.0,
+          -8.576944553888227e-18,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999999998,
+          2.6397121052766746e-17,
+          0.0
+        ],
+        [
+          0.0,
+          -5.551115123125783e-17,
+          1.0,
+          0.0
+        ],
+        [
+          39.980602124368815,
+          -26.547640964523872,
+          -17.732124341827245,
+          1.0
+        ]
+      ],
+      "grounded": false
+    }
+  ],
+  "assembly": {
+    "joints": [
+      {
+        "id": 190,
+        "name": "Turret",
+        "kind": "revolute",
+        "a": {
+          "occurrence": 148,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              65.0,
+              31.0
+            ],
+            "z": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        "b": {
+          "occurrence": 150,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              65.0,
+              31.0
+            ],
+            "z": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        "values": [
+          0.3141592653589793
+        ],
+        "limits": [
+          [
+            -3.141592653589793,
+            3.141592653589793
+          ]
+        ],
+        "flip": true,
+        "offset": 0.0,
+        "angle": 0.0
+      },
+      {
+        "id": 191,
+        "name": "Shoulder",
+        "kind": "revolute",
+        "a": {
+          "occurrence": 150,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              65.0,
+              68.0
+            ],
+            "z": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "b": {
+          "occurrence": 152,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              65.0,
+              68.0
+            ],
+            "z": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "values": [
+          0.24434609527920614
+        ],
+        "limits": [
+          [
+            -0.7853981633974483,
+            1.9198621771937625
+          ]
+        ],
+        "flip": true,
+        "offset": 0.0,
+        "angle": 0.0
+      },
+      {
+        "id": 192,
+        "name": "Elbow",
+        "kind": "revolute",
+        "a": {
+          "occurrence": 152,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              65.0,
+              173.0
+            ],
+            "z": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "b": {
+          "occurrence": 154,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              65.0,
+              173.0
+            ],
+            "z": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "values": [
+          -0.10471975511965978
+        ],
+        "limits": [
+          [
+            -1.5707963267948966,
+            1.5707963267948966
+          ]
+        ],
+        "flip": true,
+        "offset": 0.0,
+        "angle": 0.0
+      },
+      {
+        "id": 193,
+        "name": "Wrist Pitch",
+        "kind": "revolute",
+        "a": {
+          "occurrence": 154,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              -40.0,
+              173.0
+            ],
+            "z": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "b": {
+          "occurrence": 156,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              -40.0,
+              173.0
+            ],
+            "z": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "values": [
+          -0.13962634015954636
+        ],
+        "limits": [
+          [
+            -1.9198621771937625,
+            1.9198621771937625
+          ]
+        ],
+        "flip": true,
+        "offset": 0.0,
+        "angle": 0.0
+      },
+      {
+        "id": 194,
+        "name": "Wrist Roll",
+        "kind": "revolute",
+        "a": {
+          "occurrence": 156,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              -40.0,
+              151.0
+            ],
+            "z": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        "b": {
+          "occurrence": 158,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              -40.0,
+              151.0
+            ],
+            "z": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        "values": [
+          -0.3141592653589793
+        ],
+        "limits": [
+          [
+            -3.141592653589793,
+            3.141592653589793
+          ]
+        ],
+        "flip": true,
+        "offset": 0.0,
+        "angle": 0.0
+      },
+      {
+        "id": 195,
+        "name": "Grip",
+        "kind": "slider",
+        "a": {
+          "occurrence": 158,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              -18.0,
+              115.0
+            ],
+            "z": [
+              0.0,
+              1.0,
+              0.0
+            ]
+          }
+        },
+        "b": {
+          "occurrence": 160,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              -18.0,
+              115.0
+            ],
+            "z": [
+              0.0,
+              1.0,
+              0.0
+            ]
+          }
+        },
+        "values": [
+          8.5
+        ],
+        "limits": [
+          [
+            0.0,
+            10.0
+          ]
+        ],
+        "flip": true,
+        "offset": 0.0,
+        "angle": 0.0
+      },
+      {
+        "id": 196,
+        "name": "Grip Follow",
+        "kind": "slider",
+        "a": {
+          "occurrence": 158,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              -62.0,
+              115.0
+            ],
+            "z": [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          }
+        },
+        "b": {
+          "occurrence": 162,
+          "snap": {
+            "type": "point",
+            "point": [
+              0.0,
+              -62.0,
+              115.0
+            ],
+            "z": [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          }
+        },
+        "values": [
+          0.0
+        ],
+        "limits": [
+          [
+            0.0,
+            10.0
+          ]
+        ],
+        "flip": true,
+        "offset": 0.0,
+        "angle": 0.0
+      }
+    ],
+    "links": [
+      {
+        "a": 195,
+        "ia": 0,
+        "b": 196,
+        "ib": 0,
+        "ratio": 1.0,
+        "offset": 0.0
+      }
+    ],
+    "studies": [
+      {
+        "id": 203,
+        "name": "Truck Transfer",
+        "steps": 60,
+        "keys": [
+          {
+            "joint": 190,
+            "index": 0,
+            "points": [
+              [
+                0.0,
+                -0.9342887112265805
+              ],
+              [
+                4.0,
+                -0.9342887112265805
+              ],
+              [
+                8.0,
+                -0.9342887112265805
+              ],
+              [
+                12.0,
+                -0.9342887112265805
+              ],
+              [
+                18.0,
+                -0.8120667943679216
+              ],
+              [
+                24.0,
+                -0.4781486565471145
+              ],
+              [
+                30.0,
+                -0.0220068565383965
+              ],
+              [
+                36.0,
+                0.4341349434703215
+              ],
+              [
+                42.0,
+                0.7680530812911286
+              ],
+              [
+                48.0,
+                0.8902749981497876
+              ],
+              [
+                52.0,
+                0.8902749981497876
+              ],
+              [
+                56.0,
+                0.8902749981497876
+              ],
+              [
+                60.0,
+                0.8902749981497876
+              ]
+            ]
+          },
+          {
+            "joint": 191,
+            "index": 0,
+            "points": [
+              [
+                0.0,
+                0.6252170806371646
+              ],
+              [
+                4.0,
+                0.561400861867244
+              ],
+              [
+                8.0,
+                0.4588383337030493
+              ],
+              [
+                12.0,
+                0.42131899077292717
+              ],
+              [
+                18.0,
+                0.38813155504625496
+              ],
+              [
+                24.0,
+                0.2921733527716068
+              ],
+              [
+                30.0,
+                0.22935546233382684
+              ],
+              [
+                36.0,
+                0.27391197280799007
+              ],
+              [
+                42.0,
+                0.3336755370547799
+              ],
+              [
+                48.0,
+                0.34967846096631594
+              ],
+              [
+                52.0,
+                0.39005665321120475
+              ],
+              [
+                56.0,
+                0.4995027599452651
+              ],
+              [
+                60.0,
+                0.5673663972505607
+              ]
+            ]
+          },
+          {
+            "joint": 192,
+            "index": 0,
+            "points": [
+              [
+                0.0,
+                0.056183893950949464
+              ],
+              [
+                4.0,
+                0.031073842002507044
+              ],
+              [
+                8.0,
+                -0.053647930547801696
+              ],
+              [
+                12.0,
+                -0.11346036401364737
+              ],
+              [
+                18.0,
+                -0.08654040563088684
+              ],
+              [
+                24.0,
+                -0.006887069228369624
+              ],
+              [
+                30.0,
+                0.04305378198819612
+              ],
+              [
+                36.0,
+                0.016695819624577758
+              ],
+              [
+                42.0,
+                -0.011875220230569418
+              ],
+              [
+                48.0,
+                -0.013414600630828416
+              ],
+              [
+                52.0,
+                0.04615348673973805
+              ],
+              [
+                56.0,
+                0.1312138531649337
+              ],
+              [
+                60.0,
+                0.1566049031229472
+              ]
+            ]
+          },
+          {
+            "joint": 193,
+            "index": 0,
+            "points": [
+              [
+                0.0,
+                -0.6814009745881142
+              ],
+              [
+                4.0,
+                -0.5924747038697511
+              ],
+              [
+                8.0,
+                -0.4051904031552475
+              ],
+              [
+                12.0,
+                -0.3078586267592798
+              ],
+              [
+                18.0,
+                -0.3015911494153682
+              ],
+              [
+                24.0,
+                -0.28528628354323715
+              ],
+              [
+                30.0,
+                -0.27240924432202296
+              ],
+              [
+                36.0,
+                -0.29060779243256785
+              ],
+              [
+                42.0,
+                -0.3218003168242105
+              ],
+              [
+                48.0,
+                -0.3362638603354875
+              ],
+              [
+                52.0,
+                -0.43621013995094277
+              ],
+              [
+                56.0,
+                -0.6307166131101989
+              ],
+              [
+                60.0,
+                -0.7239713003735079
+              ]
+            ]
+          },
+          {
+            "joint": 194,
+            "index": 0,
+            "points": [
+              [
+                0.0,
+                0.9342887112265805
+              ],
+              [
+                4.0,
+                0.9342887112265805
+              ],
+              [
+                8.0,
+                0.9342887112265805
+              ],
+              [
+                12.0,
+                0.9342887112265805
+              ],
+              [
+                18.0,
+                0.8120667943679216
+              ],
+              [
+                24.0,
+                0.4781486565471145
+              ],
+              [
+                30.0,
+                0.0220068565383965
+              ],
+              [
+                36.0,
+                -0.4341349434703215
+              ],
+              [
+                42.0,
+                -0.7680530812911286
+              ],
+              [
+                48.0,
+                -0.8902749981497876
+              ],
+              [
+                52.0,
+                -0.8902749981497876
+              ],
+              [
+                56.0,
+                -0.8902749981497876
+              ],
+              [
+                60.0,
+                -0.8902749981497876
+              ]
+            ]
+          },
+          {
+            "joint": 195,
+            "index": 0,
+            "points": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                60.0,
+                0.0
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "appearances": {
+    "bodies": {
+      "Axle Front": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Axle Rear": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Base Bearing Ring": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Base Bolt 1": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Base Bolt 2": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Base Bolt 3": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Base Bolt 4": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Base Bolt 5": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Base Bolt 6": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Base Casting": {
+        "name": "Custom",
+        "color": [
+          43,
+          47,
+          54
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.55,
+          "roughness": 0.46,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Cable Gland": {
+        "name": "Plastic - Matte Black TPU",
+        "color": [
+          31,
+          30,
+          32
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.83,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Elbow Cap": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Elbow Motor": {
+        "name": "Custom",
+        "color": [
+          34,
+          38,
+          46
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.7,
+          "roughness": 0.32,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Finger Jaw L": {
+        "name": "Metal - Bead Blast Aluminum",
+        "color": [
+          195,
+          201,
+          210
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.58,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Finger Jaw R": {
+        "name": "Metal - Bead Blast Aluminum",
+        "color": [
+          195,
+          201,
+          210
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.58,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Forearm Body": {
+        "name": "Custom",
+        "color": [
+          235,
+          94,
+          21
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.15,
+          "roughness": 0.26,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Forearm Conduit": {
+        "name": "Custom",
+        "color": [
+          34,
+          38,
+          46
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.7,
+          "roughness": 0.32,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Front Bumper": {
+        "name": "Metal - Cool Reflective Silver",
+        "color": [
+          225,
+          230,
+          237
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Front Grille": {
+        "name": "Metal - Cool Reflective Silver",
+        "color": [
+          225,
+          230,
+          237
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Grid Bolt 1": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Grid Bolt 2": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Grid Bolt 3": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Grid Bolt 4": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Grid Plate": {
+        "name": "Custom",
+        "color": [
+          38,
+          42,
+          49
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.45,
+          "roughness": 0.52,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Grip Pad L": {
+        "name": "Plastic - Matte Black TPU",
+        "color": [
+          31,
+          30,
+          32
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.83,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Grip Pad R": {
+        "name": "Plastic - Matte Black TPU",
+        "color": [
+          31,
+          30,
+          32
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.83,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Gripper Body": {
+        "name": "Custom",
+        "color": [
+          34,
+          38,
+          46
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.7,
+          "roughness": 0.32,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Gripper Flange": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Gripper Rail": {
+        "name": "Metal - Polished Carbon Steel",
+        "color": [
+          161,
+          166,
+          173
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.16,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Headlight L": {
+        "name": "Custom",
+        "color": [
+          255,
+          244,
+          194
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.08,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Headlight R": {
+        "name": "Custom",
+        "color": [
+          255,
+          244,
+          194
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.08,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Rear Bumper": {
+        "name": "Metal - Cool Reflective Silver",
+        "color": [
+          225,
+          230,
+          237
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Rim FL": {
+        "name": "Metal - Cool Reflective Silver",
+        "color": [
+          225,
+          230,
+          237
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Rim FR": {
+        "name": "Metal - Cool Reflective Silver",
+        "color": [
+          225,
+          230,
+          237
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Rim RL": {
+        "name": "Metal - Cool Reflective Silver",
+        "color": [
+          225,
+          230,
+          237
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Rim RR": {
+        "name": "Metal - Cool Reflective Silver",
+        "color": [
+          225,
+          230,
+          237
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Shoulder Cap L": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Shoulder Cap R": {
+        "name": "Metal - Soft Satin Stainless",
+        "color": [
+          187,
+          193,
+          201
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 1.0,
+          "roughness": 0.36,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Shoulder Motor": {
+        "name": "Custom",
+        "color": [
+          34,
+          38,
+          46
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.7,
+          "roughness": 0.32,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Taillight L": {
+        "name": "Custom",
+        "color": [
+          255,
+          42,
+          26
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Taillight R": {
+        "name": "Custom",
+        "color": [
+          255,
+          42,
+          26
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.12,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Tire FL": {
+        "name": "Plastic - Matte Black TPU",
+        "color": [
+          31,
+          30,
+          32
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.83,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Tire FR": {
+        "name": "Plastic - Matte Black TPU",
+        "color": [
+          31,
+          30,
+          32
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.83,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Tire RL": {
+        "name": "Plastic - Matte Black TPU",
+        "color": [
+          31,
+          30,
+          32
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.83,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Tire RR": {
+        "name": "Plastic - Matte Black TPU",
+        "color": [
+          31,
+          30,
+          32
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.83,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Truck Body": {
+        "name": "Custom",
+        "color": [
+          200,
+          29,
+          37
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.35,
+          "roughness": 0.18,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Truck Chassis": {
+        "name": "Custom",
+        "color": [
+          32,
+          35,
+          40
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.2,
+          "roughness": 0.65,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Truck Glass": {
+        "name": "Glass - Smoked",
+        "color": [
+          90,
+          96,
+          104
+        ],
+        "opacity": 0.45
+      },
+      "Truck Seat": {
+        "name": "Custom",
+        "color": [
+          32,
+          35,
+          40
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.2,
+          "roughness": 0.65,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Turret Yoke": {
+        "name": "Custom",
+        "color": [
+          235,
+          94,
+          21
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.15,
+          "roughness": 0.26,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Upper Arm Body": {
+        "name": "Custom",
+        "color": [
+          235,
+          94,
+          21
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.15,
+          "roughness": 0.26,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Wrist Housing": {
+        "name": "Custom",
+        "color": [
+          34,
+          38,
+          46
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.7,
+          "roughness": 0.32,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Wrist Motor": {
+        "name": "Custom",
+        "color": [
+          34,
+          38,
+          46
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.7,
+          "roughness": 0.32,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Zone A Frame": {
+        "name": "Custom",
+        "color": [
+          234,
+          179,
+          8
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.35,
+          "dielectric_ior": 1.5
+        }
+      },
+      "Zone B Frame": {
+        "name": "Custom",
+        "color": [
+          34,
+          197,
+          94
+        ],
+        "opacity": 1.0,
+        "pbr": {
+          "metallic": 0.0,
+          "roughness": 0.35,
+          "dielectric_ior": 1.5
+        }
+      }
+    }
+  }
+}
